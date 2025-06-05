@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Leelo Bien y Piensalo Bien Por Favor</title>
+  <style>
+    body {
+      background-color: #8854d0; /* púrpura medio sólido */
+      color: #000000;
+      font-family: 'Courier New', Courier, monospace;
+      padding: 40px;
+      font-size: 20px;
+      white-space: pre-wrap;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    #texto {
+      max-width: 700px;
+      margin: auto;
+      text-shadow:
+        0 0 3px rgba(0, 0, 0, 0.3),
+        0 0 6px rgba(0, 0, 0, 0.2);
+      background-color: rgba(255, 255, 255, 0.6); /* mini fondo blanco semi-transparente */
+      padding: 20px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="texto"></div>
+
+  <script>
+    const cuento = `Hola, Qué tal?, Cómo estas?, espero que estes bien, pero ire directo al grano, el sabado o domingo en Galerias o Fundidora despues del medio día, ahi decidire todo de una vez por todas, si quieres volver a intentarlo (cuando estes lista) ve (tambien si no te pueden llevar y me dices lo tomare como que te quieres quedar), si ya no quieres nada de nada conmigo no vayas y no digas nada, desde ese día vere si te dejo de hablar completamente o me sigo esforzando por conquistarte, porque yo no quiero obligarte a estar conmigo, quiero saber si realmente te sigo interesando como antes, bueno ya sabes, si es un no entonces no digas nada y no vayas, y si es diferente tu respuesta estoy dispuesto a escuchar lo que me quieras decir, siempre y cuando no sea nada de nunca volver y esas cosas, porque te di una opcion de no responderme y no ir y la otra que ya sabes, y bueno, tú decidiras, y ya por ultimo, gracias por todo y perdon por tan poco, nunca olvidare todo lo que paso entre nosotros, estoy seguro que dolera toda la vida pero pues fue mi culpa y sinceramente nunca me habia arrepentido tanto de algo hasta que me di cuenta de lo que hice en estos meses o años, se que dolera pero ni modo, esperare tu decision y si decides irte te dejare ir para siempre, pero si decides quedarte entonces te puedo dar todo lo que quieras y mucho mas, pero en fin, espero que te lo tomes en serio esto. I Love You my Girl. I Always Will...`;
+
+    let i = 0;
+    const velocidad = 50;
+    const textoDiv = document.getElementById("texto");
+
+    function escribir() {
+      if (i < cuento.length) {
+        textoDiv.innerHTML += cuento.charAt(i);
+        i++;
+        setTimeout(escribir, velocidad);
+      }
+    }
+
+    window.onload = escribir;
+  </script>
+</body>
+</html>
+</html>
